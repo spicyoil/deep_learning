@@ -21,7 +21,11 @@ print(A+B,"\n",A*B)
 A = np.array([[1, 2], [3, 4]])
 B = np.array([5, 6])
 print (A*B)
-
+print(np.dot(A,B))
+print(np.ndim(A))
+print(np.ndim(B))
+print(A.shape)
+print(x.shape)
 #flatten
 A = A.flatten()
 print(A)
@@ -29,3 +33,30 @@ print(A)
 #judgement
 print(A>1)
 print(A[A>1])
+
+print(np.ndim(A))
+print(np.ndim(B))
+print(A.shape)
+print(x.shape)
+
+
+
+c= np.array([[1,2],[3,4],[5,6]])
+print(np.ndim(c))
+print(c.shape)
+
+c= np.array([[1,2,3],[3,4,3],[5,6,3]])
+print(np.ndim(c))
+print(c.shape)
+
+c= np.array([[[1,2],[3,4],[5,6]],[[1,2],[3,4],[5,6]]])
+print(np.ndim(c))
+print(c.shape)
+
+
+g=np.array([1,2])
+print(g)
+print(g.shape)
+g=np.array([[1],[2]])
+print(g)
+print(g.shape)
