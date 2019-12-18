@@ -2,7 +2,10 @@
 import os
 import sys
 
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+file_dir = os.path.dirname(__file__) # abs file dir
+file_pdir = os.path.join(os.path.split(file_dir)[0]) # abs pre file dir
+print(file_pdir)
+sys.path.append(file_pdir)  # 親ディレクトリのファイルをインポートするための設定
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset.mnist import load_mnist
