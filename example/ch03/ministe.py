@@ -1,8 +1,8 @@
 import sys,os
-sys.path.append(os.pardir) # 为了导入父目录中的文件而进行的设定
-os.getcwd()
-os.chdir("\\\itsnas12.semicon.sony.co.jp\\hfs12432\\public\\Users\\zhu\\deep learning practice\\deep_learning")
-print(os.getcwd())
+file_dir = os.path.dirname(__file__) # abs file dir
+file_pdir = os.path.join(os.path.split(file_dir)[0]) # abs pre file dir
+print(file_pdir)
+sys.path.append(file_pdir)  # 親ディレクトリのファイルをインポートするための設定
 
 from dataset.mnist import load_mnist
 # # 第一次调用会花费几分钟……

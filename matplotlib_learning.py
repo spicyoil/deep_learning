@@ -13,7 +13,7 @@ plt.plot(x,y2,label="cos",linestyle="--")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.title("Sin&Cos")
-plt.legend()#图示
+plt.legend()   #图示
 #plt.show()
 
 import matplotlib.pyplot as plt2  #imshow
