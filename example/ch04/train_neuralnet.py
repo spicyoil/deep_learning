@@ -11,6 +11,7 @@ from two_layer_net import TwoLayerNet
 
 # データの読み込み
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, one_hot_label=True)
+print(x_train.shape,t_train.shape,x_test.shape,t_test.shape)
 
 network = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
 
@@ -36,7 +37,8 @@ for i in range(iters_num):
     
     # パラメータの更新
     for key in ('W1', 'b1', 'W2', 'b2'):
-        network.params[key] -= learning_rate * grad[key]
+        network.params[key] -= learning_rate * grad[key] #learning rate grad可能很大，防止震荡
+        #负向梯度法，求最小值
     
     loss = network.loss(x_batch, t_batch)
     train_loss_list.append(loss)
